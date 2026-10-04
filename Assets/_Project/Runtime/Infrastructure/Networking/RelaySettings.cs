@@ -11,9 +11,9 @@ namespace Uno.Infrastructure.Networking
         public const string PrefPortKey = "uno.relayPort";
 
         /// <summary>
-        /// Placeholder until DNS is pointed; updated after AWS deploy.
+        /// Public cloud relay hostname (GoDaddy DNS → AWS Lightsail).
         /// </summary>
-        public const string DefaultHost = "127.0.0.1";
+        public const string DefaultHost = "uno.himansh.co.in";
         public const int DefaultPort = GameSessionPorts.DefaultTcpPort;
 
         public static string Host =>
