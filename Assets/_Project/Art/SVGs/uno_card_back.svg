@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 336" width="240" height="336">
+  <defs>
+    <!-- Outer Card Shadow & Border Gradients -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <linearGradient id="cardBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="darkBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1D24"/>
+      <stop offset="50%" stop-color="#111318"/>
+      <stop offset="100%" stop-color="#090A0D"/>
+    </linearGradient>
+    <linearGradient id="unoRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B53"/>
+      <stop offset="100%" stop-color="#C40C24"/>
+    </linearGradient>
+    <linearGradient id="unoYellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE500"/>
+      <stop offset="100%" stop-color="#FF9100"/>
+    </linearGradient>
+    <linearGradient id="ovalPattern" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD600"/>
+      <stop offset="100%" stop-color="#E71D36"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Card Outer Base -->
+  <rect x="4" y="4" width="232" height="328" rx="18" fill="url(#cardBorderGrad)" filter="url(#cardShadow)"/>
+  <rect x="10" y="10" width="220" height="316" rx="14" fill="url(#darkBgGrad)"/>
+
+  <!-- Inner Pattern Grid / Corner Accents -->
+  <rect x="16" y="16" width="208" height="304" rx="10" fill="none" stroke="#2D3240" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- Central Slanted Oval -->
+  <g transform="translate(120, 168) rotate(-22)">
+    <ellipse cx="0" cy="0" rx="96" ry="52" fill="url(#unoRedGrad)" stroke="url(#unoYellowGrad)" stroke-width="5" filter="url(#cardShadow)"/>
+    <ellipse cx="0" cy="0" rx="88" ry="44" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2"/>
+    
+    <!-- UNO Logo Text -->
+    <text x="-48" y="18" font-family="'Outfit', 'Impact', sans-serif" font-size="52" font-weight="900" fill="url(#unoYellowGrad)" stroke="#111" stroke-width="3" font-style="italic" letter-spacing="-2">UNO</text>
+    <text x="-48" y="18" font-family="'Outfit', 'Impact', sans-serif" font-size="52" font-weight="900" fill="#FFFFFF" font-style="italic" letter-spacing="-2">UNO</text>
+  </g>
+
+  <!-- Small Corner UNO Accents -->
+  <text x="24" y="38" font-family="'Impact', sans-serif" font-size="14" font-weight="900" fill="#FF9100" font-style="italic">UNO</text>
+  <g transform="translate(216, 298) rotate(180)">
+    <text x="-12" y="0" font-family="'Impact', sans-serif" font-size="14" font-weight="900" fill="#FF9100" font-style="italic">UNO</text>
+  </g>
+</svg>

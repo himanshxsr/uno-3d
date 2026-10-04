@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <filter id="modalGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <linearGradient id="redQuadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D63"/>
+      <stop offset="100%" stop-color="#C40C24"/>
+    </linearGradient>
+    <linearGradient id="blueQuadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A92FF"/>
+      <stop offset="100%" stop-color="#004AD7"/>
+    </linearGradient>
+    <linearGradient id="yellowQuadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFDF00"/>
+      <stop offset="100%" stop-color="#E68A00"/>
+    </linearGradient>
+    <linearGradient id="greenQuadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F07D"/>
+      <stop offset="100%" stop-color="#007B37"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Backdrop Container -->
+  <rect width="400" height="400" fill="rgba(15, 18, 26, 0.75)" rx="24"/>
+
+  <!-- Outer Modal Ring Header -->
+  <g transform="translate(200, 48)">
+    <rect x="-130" y="-20" width="260" height="40" rx="20" fill="#181A20" stroke="#33394B" stroke-width="2"/>
+    <text x="0" y="6" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">SELECT WILD COLOR</text>
+  </g>
+
+  <!-- Interactive 4-Quadrant Wheel -->
+  <g transform="translate(200, 220)" filter="url(#modalGlow)">
+    <!-- Outer Base Ring -->
+    <circle cx="0" cy="0" r="148" fill="#111318" stroke="#2D3240" stroke-width="6"/>
+
+    <!-- Quadrant 1: Top-Left RED -->
+    <g class="quadrant-red" style="cursor: pointer;">
+      <path d="M 0 0 L -140 0 A 140 140 0 0 1 0 -140 Z" fill="url(#redQuadGrad)" stroke="#111318" stroke-width="4"/>
+      <text x="-60" y="-60" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" text-anchor="middle">RED</text>
+    </g>
+
+    <!-- Quadrant 2: Top-Right BLUE -->
+    <g class="quadrant-blue" style="cursor: pointer;">
+      <path d="M 0 0 L 0 -140 A 140 140 0 0 1 140 0 Z" fill="url(#blueQuadGrad)" stroke="#111318" stroke-width="4"/>
+      <text x="60" y="-60" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" text-anchor="middle">BLUE</text>
+    </g>
+
+    <!-- Quadrant 3: Bottom-Right YELLOW -->
+    <g class="quadrant-yellow" style="cursor: pointer;">
+      <path d="M 0 0 L 140 0 A 140 140 0 0 1 0 140 Z" fill="url(#yellowQuadGrad)" stroke="#111318" stroke-width="4"/>
+      <text x="60" y="70" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="#111318" text-anchor="middle">YELLOW</text>
+    </g>
+
+    <!-- Quadrant 4: Bottom-Left GREEN -->
+    <g class="quadrant-green" style="cursor: pointer;">
+      <path d="M 0 0 L 0 140 A 140 140 0 0 1 -140 0 Z" fill="url(#greenQuadGrad)" stroke="#111318" stroke-width="4"/>
+      <text x="-60" y="70" font-family="'Outfit', sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" text-anchor="middle">GREEN</text>
+    </g>
+
+    <!-- Center Emblem / Hub -->
+    <circle cx="0" cy="0" r="44" fill="#181A20" stroke="#FFFFFF" stroke-width="5"/>
+    <text x="0" y="8" font-family="'Impact', sans-serif" font-size="24" font-weight="900" fill="#FFC700" font-style="italic" text-anchor="middle">UNO</text>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+{
+    "name":  "Uno.UI",
+    "rootNamespace":  "Uno.UI",
+    "references":  [
+                       "Uno.Core",
+                       "Uno.Application",
+                       "Uno.Infrastructure",
+                       "UnityEngine.UI",
+                       "Unity.TextMeshPro"
+                   ],
+    "includePlatforms":  [
+
+                         ],
+    "excludePlatforms":  [
+
+                         ],
+    "allowUnsafeCode":  false,
+    "overrideReferences":  false,
+    "precompiledReferences":  [
+
+                              ],
+    "autoReferenced":  true,
+    "defineConstraints":  [
+
+                          ],
+    "versionDefines":  [
+
+                       ],
+    "noEngineReferences":  false
+}

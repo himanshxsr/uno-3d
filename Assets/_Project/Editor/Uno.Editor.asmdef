@@ -1,0 +1,23 @@
+{
+    "name": "Uno.Editor",
+    "rootNamespace": "Uno.Editor",
+    "references": [
+        "Uno.Core",
+        "Uno.Application",
+        "Uno.Presentation",
+        "Uno.UI",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

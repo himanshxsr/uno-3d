@@ -1,0 +1,17 @@
+{
+    "name": "Uno.Audio",
+    "rootNamespace": "Uno.Audio",
+    "references": [
+        "Uno.Core",
+        "Uno.Application"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

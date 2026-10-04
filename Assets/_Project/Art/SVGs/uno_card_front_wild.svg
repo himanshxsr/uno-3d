@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 336" width="240" height="336">
+  <defs>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="cardBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <linearGradient id="darkBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D3240"/>
+      <stop offset="50%" stop-color="#181A20"/>
+      <stop offset="100%" stop-color="#0D0E12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="4" y="4" width="232" height="328" rx="18" fill="url(#cardBorderGrad)" filter="url(#cardShadow)"/>
+  <rect x="12" y="12" width="216" height="312" rx="14" fill="url(#darkBgGrad)"/>
+
+  <!-- Top-Left Corner +4 Index -->
+  <g transform="translate(24, 28)">
+    <text x="0" y="24" font-family="'Impact', 'Arial Black', sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" font-style="italic">+4</text>
+  </g>
+
+  <!-- Bottom-Right Corner Index -->
+  <g transform="translate(216, 308) rotate(180)">
+    <text x="0" y="24" font-family="'Impact', 'Arial Black', sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" font-style="italic">+4</text>
+  </g>
+
+  <!-- Center Slanted Oval with 4 Wild Quadrants -->
+  <g transform="translate(120, 168) rotate(-22)">
+    <ellipse cx="0" cy="0" rx="92" ry="50" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4" filter="url(#cardShadow)"/>
+    <g transform="scale(0.85)">
+      <!-- Quadrant Red -->
+      <path d="M 0 0 L -80 -40 A 80 44 0 0 1 0 -44 Z" fill="#E71D36"/>
+      <!-- Quadrant Blue -->
+      <path d="M 0 0 L 0 -44 A 80 44 0 0 1 80 -40 Z" fill="#0066FF"/>
+      <!-- Quadrant Yellow -->
+      <path d="M 0 0 L 80 -40 A 80 44 0 0 1 0 44 Z" fill="#FFC700"/>
+      <!-- Quadrant Green -->
+      <path d="M 0 0 L 0 44 A 80 44 0 0 1 -80 -40 Z" fill="#00B865"/>
+    </g>
+  </g>
+
+  <!-- 4 Mini Cards Overlay (+4 Graphic) -->
+  <g transform="translate(120, 168)">
+    <rect x="-30" y="-30" width="24" height="36" rx="3" fill="#E71D36" stroke="#FFFFFF" stroke-width="1.5" transform="rotate(-30)"/>
+    <rect x="-16" y="-32" width="24" height="36" rx="3" fill="#0066FF" stroke="#FFFFFF" stroke-width="1.5" transform="rotate(-10)"/>
+    <rect x="-2" y="-32" width="24" height="36" rx="3" fill="#FFC700" stroke="#FFFFFF" stroke-width="1.5" transform="rotate(10)"/>
+    <rect x="12" y="-30" width="24" height="36" rx="3" fill="#00B865" stroke="#FFFFFF" stroke-width="1.5" transform="rotate(30)"/>
+    
+    <text x="-28" y="32" font-family="'Impact', sans-serif" font-size="52" font-weight="900" fill="#FFFFFF" font-style="italic" stroke="#000" stroke-width="4" stroke-linejoin="round">+4</text>
+    <text x="-28" y="32" font-family="'Impact', sans-serif" font-size="52" font-weight="900" fill="#FFFFFF" font-style="italic">+4</text>
+  </g>
+</svg>

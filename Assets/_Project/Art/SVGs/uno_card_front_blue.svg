@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 336" width="240" height="336">
+  <defs>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="cardBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <linearGradient id="blueBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A85FF"/>
+      <stop offset="50%" stop-color="#0066FF"/>
+      <stop offset="100%" stop-color="#004AD7"/>
+    </linearGradient>
+    <linearGradient id="whiteOvalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base Frame -->
+  <rect x="4" y="4" width="232" height="328" rx="18" fill="url(#cardBorderGrad)" filter="url(#cardShadow)"/>
+  <rect x="12" y="12" width="216" height="312" rx="14" fill="url(#blueBgGrad)"/>
+
+  <!-- Top-Left Corner Skip Icon -->
+  <g transform="translate(24, 24)">
+    <circle cx="14" cy="14" r="12" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <line x1="5" y1="23" x2="23" y2="5" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom-Right Corner Skip Icon -->
+  <g transform="translate(216, 312) rotate(180)">
+    <circle cx="14" cy="14" r="12" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <line x1="5" y1="23" x2="23" y2="5" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Center Slanted Oval -->
+  <g transform="translate(120, 168) rotate(-22)">
+    <ellipse cx="0" cy="0" rx="92" ry="50" fill="url(#whiteOvalGrad)" stroke="#FFFFFF" stroke-width="4" filter="url(#cardShadow)"/>
+  </g>
+
+  <!-- Center Skip Icon -->
+  <g transform="translate(120, 168)">
+    <circle cx="0" cy="0" r="36" fill="none" stroke="#0066FF" stroke-width="10"/>
+    <line x1="-25" y1="25" x2="25" y2="-25" stroke="#0066FF" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

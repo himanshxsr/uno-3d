@@ -1,0 +1,21 @@
+{
+    "name": "Uno.Tests.Editor",
+    "rootNamespace": "Uno.Tests.Editor",
+    "references": [
+        "Uno.Core",
+        "Uno.Application"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

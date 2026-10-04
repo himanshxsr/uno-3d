@@ -1,0 +1,16 @@
+{
+    "name": "Uno.Infrastructure",
+    "rootNamespace": "Uno.Infrastructure",
+    "references": [
+        "Uno.Core"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

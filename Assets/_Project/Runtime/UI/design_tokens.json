@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json.schemastore.org/design-tokens",
+  "name": "UNO 3D Enterprise Design System",
+  "version": "1.0.0",
+  "tokens": {
+    "color": {
+      "palette": {
+        "crimson_red": {
+          "hex": "#E71D36",
+          "gradient": ["#FF3B53", "#E71D36", "#B8001F"],
+          "unity_rgba": { "r": 0.906, "g": 0.114, "b": 0.212, "a": 1.0 },
+          "glow": "rgba(231, 29, 54, 0.45)"
+        },
+        "royal_blue": {
+          "hex": "#0066FF",
+          "gradient": ["#2A85FF", "#0066FF", "#004AD7"],
+          "unity_rgba": { "r": 0.0, "g": 0.4, "b": 1.0, "a": 1.0 },
+          "glow": "rgba(0, 102, 255, 0.45)"
+        },
+        "emerald_green": {
+          "hex": "#00B865",
+          "gradient": ["#00E676", "#00B865", "#008044"],
+          "unity_rgba": { "r": 0.0, "g": 0.722, "b": 0.396, "a": 1.0 },
+          "glow": "rgba(0, 184, 101, 0.45)"
+        },
+        "golden_yellow": {
+          "hex": "#FFC700",
+          "gradient": ["#FFD600", "#FFC700", "#E6A100"],
+          "unity_rgba": { "r": 1.0, "g": 0.78, "b": 0.0, "a": 1.0 },
+          "glow": "rgba(255, 199, 0, 0.45)"
+        },
+        "neutral_wild": {
+          "hex": "#181A20",
+          "gradient": ["#2D3240", "#181A20", "#0D0E12"],
+          "unity_rgba": { "r": 0.094, "g": 0.102, "b": 0.125, "a": 1.0 }
+        },
+        "table_felt_dark": {
+          "hex": "#0B2B1B",
+          "gradient": ["#1E5939", "#123F28", "#0B2B1B"]
+        },
+        "slate_dark": {
+          "hex": "#14171F",
+          "border": "#2D3240",
+          "text_primary": "#FFFFFF",
+          "text_muted": "#A0AEC0"
+        }
+      }
+    },
+    "typography": {
+      "font_families": {
+        "primary": "Outfit, sans-serif",
+        "card_value": "Impact, Arial Black, sans-serif"
+      },
+      "hierarchy": {
+        "card_center_value": {
+          "size_px": 96,
+          "weight": 900,
+          "style": "italic",
+          "slant_angle_deg": -18
+        },
+        "card_corner_index": {
+          "size_px": 32,
+          "weight": 900,
+          "style": "italic"
+        },
+        "hud_header": {
+          "size_px": 16,
+          "weight": 800,
+          "letter_spacing_px": 1.5,
+          "transform": "uppercase"
+        },
+        "avatar_name": {
+          "size_px": 15,
+          "weight": 800
+        },
+        "avatar_status": {
+          "size_px": 12,
+          "weight": 700
+        },
+        "uno_button": {
+          "size_px": 34,
+          "weight": 900,
+          "style": "italic"
+        },
+        "scoreboard_title": {
+          "size_px": 28,
+          "weight": 900
+        }
+      }
+    },
+    "layout": {
+      "card_dimensions": {
+        "width_px": 240,
+        "height_px": 336,
+        "aspect_ratio": 1.4,
+        "corner_radius_outer_px": 18,
+        "corner_radius_inner_px": 14,
+        "3d_world_scale_units": { "x": 1.0, "y": 1.4, "z": 0.02 }
+      },
+      "hand_fan_3d": {
+        "arc_radius": 5.0,
+        "max_fan_angle_deg": 45.0,
+        "card_spacing_z_offset": 0.015,
+        "hover_elevation_y": 0.35,
+        "hover_scale_multiplier": 1.15
+      },
+      "wild_wheel_modal": {
+        "outer_radius_px": 140,
+        "inner_hub_radius_px": 44,
+        "quadrants": [
+          { "color": "Red", "angle_range": [180, 270] },
+          { "color": "Blue", "angle_range": [270, 360] },
+          { "color": "Yellow", "angle_range": [0, 90] },
+          { "color": "Green", "angle_range": [90, 180] }
+        ]
+      },
+      "uno_button": {
+        "width_px": 160,
+        "height_px": 64,
+        "corner_radius_px": 32,
+        "pulse_frequency_hz": 1.5
+      },
+      "scoreboard_modal": {
+        "width_px": 560,
+        "height_px": 440,
+        "corner_radius_px": 24
+      }
+    },
+    "animation": {
+      "card_deal_duration_sec": 0.35,
+      "card_play_duration_sec": 0.45,
+      "hover_transition_sec": 0.15,
+      "bot_deliberation_delay_sec": { "min": 0.75, "max": 1.5 }
+    }
+  }
+}

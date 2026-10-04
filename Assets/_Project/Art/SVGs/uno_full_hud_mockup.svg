@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="glowPulse" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <radialGradient id="tableFeltGrad" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#1E5939"/>
+      <stop offset="60%" stop-color="#123F28"/>
+      <stop offset="100%" stop-color="#0B2B1B"/>
+    </radialGradient>
+    <linearGradient id="hudPanelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E232F"/>
+      <stop offset="100%" stop-color="#111319"/>
+    </linearGradient>
+    <linearGradient id="unoButtonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B53"/>
+      <stop offset="100%" stop-color="#B8001F"/>
+    </linearGradient>
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD600"/>
+      <stop offset="100%" stop-color="#FF9100"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A85FF"/>
+      <stop offset="100%" stop-color="#004AD7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 1. 3D Table Background (Felt Green Table surface with Wood Bezel) -->
+  <rect width="1280" height="720" fill="#1C130D"/>
+  <ellipse cx="640" cy="380" rx="580" ry="320" fill="url(#tableFeltGrad)" stroke="#3A281A" stroke-width="24" filter="url(#shadow)"/>
+  <ellipse cx="640" cy="380" rx="550" ry="290" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="3" stroke-dasharray="12 8"/>
+
+  <!-- 2. Central Play Zone: Discard Pile & Draw Pile -->
+  <!-- Direction Rotation Ring -->
+  <g transform="translate(640, 320)">
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#FFC700" stroke-opacity="0.3" stroke-width="4" stroke-dasharray="24 16"/>
+    <!-- Clockwise Direction Arrows -->
+    <path d="M 0 -140 A 140 140 0 0 1 140 0" fill="none" stroke="#FFC700" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="140,0 130,-12 148,-12" fill="#FFC700"/>
+    <path d="M 0 140 A 140 140 0 0 1 -140 0" fill="none" stroke="#FFC700" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="-140,0 -130,12 -148,12" fill="#FFC700"/>
+
+    <!-- Active Suit Color Indicator Ring -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#E71D36" stroke-width="8" filter="url(#shadow)"/>
+  </g>
+
+  <!-- Draw Pile (Facedown Stack) -->
+  <g transform="translate(530, 270)" filter="url(#shadow)">
+    <!-- Stack depth simulation -->
+    <rect x="6" y="6" width="90" height="126" rx="8" fill="#000" opacity="0.4"/>
+    <rect x="4" y="4" width="90" height="126" rx="8" fill="#181A20" stroke="#2D3240"/>
+    <rect x="2" y="2" width="90" height="126" rx="8" fill="#181A20" stroke="#2D3240"/>
+    <rect x="0" y="0" width="90" height="126" rx="8" fill="#181A20" stroke="#FFFFFF" stroke-width="2"/>
+    <ellipse cx="45" cy="63" rx="30" ry="18" fill="#E71D36" transform="rotate(-15 45 63)"/>
+    <text x="45" y="68" font-family="'Impact', sans-serif" font-size="16" fill="#FFC700" text-anchor="middle" font-style="italic">UNO</text>
+    <!-- Draw Count Badge -->
+    <circle cx="78" cy="14" r="14" fill="#FFC700" stroke="#111" stroke-width="2"/>
+    <text x="78" y="19" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" fill="#111" text-anchor="middle">54</text>
+  </g>
+
+  <!-- Discard Pile (Top Card Face-Up: RED 7) -->
+  <g transform="translate(650, 270)" filter="url(#shadow)">
+    <rect width="90" height="126" rx="8" fill="#E71D36" stroke="#FFFFFF" stroke-width="2"/>
+    <ellipse cx="45" cy="63" rx="34" ry="18" fill="#FFC700" transform="rotate(-15 45 63)"/>
+    <text x="45" y="74" font-family="'Impact', sans-serif" font-size="36" fill="#FFFFFF" text-anchor="middle" font-style="italic">7</text>
+    <text x="10" y="20" font-family="'Impact', sans-serif" font-size="14" fill="#FFFFFF">7</text>
+  </g>
+
+  <!-- 3. AI Opponent Avatars -->
+  <!-- Top Opponent (AI Bot 2) -->
+  <g transform="translate(640, 75)" filter="url(#shadow)">
+    <rect x="-90" y="-30" width="180" height="60" rx="30" fill="url(#hudPanelGrad)" stroke="#33394B" stroke-width="2"/>
+    <circle cx="-55" cy="0" r="22" fill="#2D3240" stroke="#FFC700" stroke-width="2"/>
+    <text x="-55" y="6" font-family="'Outfit', sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">A</text>
+    <text x="10" y="-4" font-family="'Outfit', sans-serif" font-size="15" font-weight="800" fill="#FFFFFF">Bot Alex</text>
+    <text x="10" y="14" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#00E676">5 Cards Left</text>
+  </g>
+
+  <!-- Left Opponent (AI Bot 1) -->
+  <g transform="translate(130, 320)" filter="url(#shadow)">
+    <rect x="-30" y="-70" width="180" height="60" rx="30" fill="url(#hudPanelGrad)" stroke="#33394B" stroke-width="2"/>
+    <circle cx="5" cy="-40" r="22" fill="#2D3240" stroke="#00B865" stroke-width="2"/>
+    <text x="5" y="-34" font-family="'Outfit', sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">S</text>
+    <text x="70" y="-44" font-family="'Outfit', sans-serif" font-size="15" font-weight="800" fill="#FFFFFF">Sarah</text>
+    <text x="70" y="-26" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#00E676">3 Cards</text>
+  </g>
+
+  <!-- Right Opponent (AI Bot 3) -->
+  <g transform="translate(1150, 320)" filter="url(#shadow)">
+    <rect x="-150" y="-70" width="180" height="60" rx="30" fill="url(#hudPanelGrad)" stroke="#33394B" stroke-width="2"/>
+    <circle cx="-115" cy="-40" r="22" fill="#2D3240" stroke="#2A85FF" stroke-width="2"/>
+    <text x="-115" y="-34" font-family="'Outfit', sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">D</text>
+    <text x="-50" y="-44" font-family="'Outfit', sans-serif" font-size="15" font-weight="800" fill="#FFFFFF">David</text>
+    <text x="-50" y="-26" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#00E676">4 Cards</text>
+  </g>
+
+  <!-- 4. Top HUD Header: Turn Indicator & Active Color Badge -->
+  <g transform="translate(640, 24)" filter="url(#shadow)">
+    <rect x="-220" y="0" width="440" height="44" rx="22" fill="url(#hudPanelGrad)" stroke="#E71D36" stroke-width="2"/>
+    <!-- Active Color Badge -->
+    <circle cx="-190" cy="22" r="14" fill="#E71D36" stroke="#FFFFFF" stroke-width="2"/>
+    <!-- Turn Text -->
+    <text x="0" y="28" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="1.5">YOUR TURN — MATCH RED OR 7</text>
+    <!-- Turn Timer Dial -->
+    <circle cx="190" cy="22" r="14" fill="#181A20" stroke="#FFC700" stroke-width="3"/>
+    <text x="190" y="27" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" fill="#FFC700" text-anchor="middle">12s</text>
+  </g>
+
+  <!-- 5. Bottom Foreground: Fanned 3D Player Hand Arc -->
+  <g transform="translate(640, 680)">
+    <!-- Card 1 (Red 3) -->
+    <g transform="translate(-240, -110) rotate(-24)" filter="url(#shadow)">
+      <rect width="100" height="140" rx="10" fill="#E71D36" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="14" y="28" font-family="'Impact', sans-serif" font-size="20" fill="#FFF">3</text>
+    </g>
+    <!-- Card 2 (Blue Skip) -->
+    <g transform="translate(-160, -135) rotate(-14)" filter="url(#shadow)">
+      <rect width="100" height="140" rx="10" fill="#0066FF" stroke="#FFFFFF" stroke-width="2"/>
+      <circle cx="20" cy="22" r="8" fill="none" stroke="#FFF" stroke-width="2.5"/>
+    </g>
+    <!-- Card 3 (Yellow +2) -->
+    <g transform="translate(-80, -150) rotate(-5)" filter="url(#shadow)">
+      <rect width="100" height="140" rx="10" fill="#FFC700" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="14" y="28" font-family="'Impact', sans-serif" font-size="20" fill="#333">+2</text>
+    </g>
+    <!-- Card 4 (Red 7 - Hovered / Valid Play Elevation) -->
+    <g transform="translate(0, -180) rotate(0)" filter="url(#glowPulse)">
+      <rect width="110" height="154" rx="12" fill="#E71D36" stroke="#00E676" stroke-width="4"/>
+      <ellipse cx="55" cy="77" rx="42" ry="24" fill="#FFC700" transform="rotate(-15 55 77)"/>
+      <text x="55" y="90" font-family="'Impact', sans-serif" font-size="44" fill="#FFFFFF" text-anchor="middle" font-style="italic">7</text>
+      <!-- Playable Indicator Glow -->
+      <rect width="110" height="154" rx="12" fill="none" stroke="#00E676" stroke-width="3"/>
+    </g>
+    <!-- Card 5 (Green Reverse) -->
+    <g transform="translate(80, -150) rotate(5)" filter="url(#shadow)">
+      <rect width="100" height="140" rx="10" fill="#00B865" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="14" y="28" font-family="'Impact', sans-serif" font-size="16" fill="#FFF">REV</text>
+    </g>
+    <!-- Card 6 (Wild +4) -->
+    <g transform="translate(160, -135) rotate(14)" filter="url(#shadow)">
+      <rect width="100" height="140" rx="10" fill="#181A20" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="14" y="28" font-family="'Impact', sans-serif" font-size="20" fill="#FFF">+4</text>
+    </g>
+    <!-- Card 7 (Blue 9) -->
+    <g transform="translate(240, -110) rotate(24)" filter="url(#shadow)">
+      <rect width="100" height="140" rx="10" fill="#0066FF" stroke="#FFFFFF" stroke-width="2"/>
+      <text x="14" y="28" font-family="'Impact', sans-serif" font-size="20" fill="#FFF">9</text>
+    </g>
+  </g>
+
+  <!-- 6. High-Visibility "UNO!" Callout Action Button -->
+  <g transform="translate(1120, 620)" filter="url(#glowPulse)" style="cursor: pointer;">
+    <rect x="-80" y="-32" width="160" height="64" rx="32" fill="url(#unoButtonGrad)" stroke="#FFE500" stroke-width="4"/>
+    <text x="0" y="12" font-family="'Impact', sans-serif" font-size="34" font-weight="900" fill="#FFD600" font-style="italic" text-anchor="middle" letter-spacing="2">UNO!</text>
+    <text x="0" y="12" font-family="'Impact', sans-serif" font-size="34" font-weight="900" fill="#FFFFFF" font-style="italic" text-anchor="middle" letter-spacing="2">UNO!</text>
+  </g>
+</svg>

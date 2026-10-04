@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 336" width="240" height="336">
+  <defs>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="cardBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <linearGradient id="redBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B53"/>
+      <stop offset="50%" stop-color="#E71D36"/>
+      <stop offset="100%" stop-color="#B8001F"/>
+    </linearGradient>
+    <linearGradient id="yellowOvalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF500"/>
+      <stop offset="100%" stop-color="#FFB700"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base White Card Frame -->
+  <rect x="4" y="4" width="232" height="328" rx="18" fill="url(#cardBorderGrad)" filter="url(#cardShadow)"/>
+  <!-- Inner Colored Face -->
+  <rect x="12" y="12" width="216" height="312" rx="14" fill="url(#redBgGrad)"/>
+
+  <!-- Top-Left Corner Index -->
+  <g transform="translate(24, 30)">
+    <text x="0" y="24" font-family="'Impact', 'Arial Black', sans-serif" font-size="32" font-weight="900" fill="#FFFFFF" font-style="italic">7</text>
+    <path d="M 0,30 L 22,30" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom-Right Corner Index (Rotated 180) -->
+  <g transform="translate(216, 306) rotate(180)">
+    <text x="0" y="24" font-family="'Impact', 'Arial Black', sans-serif" font-size="32" font-weight="900" fill="#FFFFFF" font-style="italic">7</text>
+    <path d="M 0,30 L 22,30" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Center Oval Background -->
+  <g transform="translate(120, 168) rotate(-22)">
+    <ellipse cx="0" cy="0" rx="92" ry="50" fill="url(#yellowOvalGrad)" stroke="#FFFFFF" stroke-width="4" filter="url(#cardShadow)"/>
+  </g>
+
+  <!-- Center Main Number '7' -->
+  <g transform="translate(120, 168)">
+    <text x="-24" y="32" font-family="'Impact', 'Arial Black', sans-serif" font-size="96" font-weight="900" fill="#E71D36" font-style="italic" stroke="#000" stroke-width="4" stroke-linejoin="round">7</text>
+    <text x="-24" y="32" font-family="'Impact', 'Arial Black', sans-serif" font-size="96" font-weight="900" fill="url(#textGrad)" font-style="italic">7</text>
+  </g>
+</svg>

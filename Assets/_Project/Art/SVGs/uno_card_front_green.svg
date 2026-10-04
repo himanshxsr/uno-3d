@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 336" width="240" height="336">
+  <defs>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="cardBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <linearGradient id="greenBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E676"/>
+      <stop offset="50%" stop-color="#00B865"/>
+      <stop offset="100%" stop-color="#008044"/>
+    </linearGradient>
+    <linearGradient id="whiteOvalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="4" y="4" width="232" height="328" rx="18" fill="url(#cardBorderGrad)" filter="url(#cardShadow)"/>
+  <rect x="12" y="12" width="216" height="312" rx="14" fill="url(#greenBgGrad)"/>
+
+  <!-- Top-Left Corner Reverse Icon -->
+  <g transform="translate(24, 24)">
+    <path d="M 4 8 L 20 8 M 20 8 L 14 2 M 20 8 L 14 14" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M 20 20 L 4 20 M 4 20 L 10 14 M 4 20 L 10 26" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Bottom-Right Corner Reverse Icon -->
+  <g transform="translate(216, 312) rotate(180)">
+    <path d="M 4 8 L 20 8 M 20 8 L 14 2 M 20 8 L 14 14" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M 20 20 L 4 20 M 4 20 L 10 14 M 4 20 L 10 26" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Center Slanted Oval -->
+  <g transform="translate(120, 168) rotate(-22)">
+    <ellipse cx="0" cy="0" rx="92" ry="50" fill="url(#whiteOvalGrad)" stroke="#FFFFFF" stroke-width="4" filter="url(#cardShadow)"/>
+  </g>
+
+  <!-- Center Reverse Arrows -->
+  <g transform="translate(120, 168)">
+    <g transform="translate(-16, -14)">
+      <path d="M -20 -10 L 25 -10 M 25 -10 L 10 -25 M 25 -10 L 10 5" stroke="#00B865" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M 20 20 L -25 20 M -25 20 L -10 5 M -25 20 L -10 35" stroke="#00B865" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+  </g>
+</svg>

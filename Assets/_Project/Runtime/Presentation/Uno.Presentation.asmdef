@@ -1,0 +1,22 @@
+{
+    "name": "Uno.Presentation",
+    "rootNamespace": "Uno.Presentation",
+    "references": [
+        "Uno.Core",
+        "Uno.Application",
+        "Uno.Infrastructure",
+        "Uno.UI",
+        "Uno.Audio",
+        "UnityEngine.UI",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
